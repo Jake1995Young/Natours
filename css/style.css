@@ -7,7 +7,9 @@ Dark green: #28b485 rgb(40, 100, 131)
 
 */
 
-
+/*-----------------------------------------------*/
+/*------Main CSS-----*/
+/*-----------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +18,7 @@ Dark green: #28b485 rgb(40, 100, 131)
 }
 
 body {
-    font-family: "lato", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
@@ -24,6 +26,11 @@ body {
     /* Padding for entire webpage - simple white line*/
     padding: 30px;
 }
+
+
+/*-----------------------------------------------*/
+/*------Header - Background -----*/
+/*-----------------------------------------------*/
 
 .Header {
     /*VH - used for scaling on different browsers and screen sizes*/
@@ -40,4 +47,91 @@ body {
     background-position: top;
     /* used for blocking out the part of the background imager in header*/
     clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+    position: relative;
 }
+
+
+/*-----------------------------------------------*/
+/*------Logo-----*/
+/*-----------------------------------------------*/        
+.logo-box{
+    position: absolute;
+    top: 40px;
+    height: 40px;
+}
+
+.logo{
+    height: 35px;
+    
+}
+
+/*-----------------------------------------------*/
+/*------Heading Text-----*/
+/*-----------------------------------------------*/
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    text-transform: 
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight 400;
+    letter-spacing: 17.4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
