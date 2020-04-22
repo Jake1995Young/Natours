@@ -1,8 +1,43 @@
 /*
 COLORS:
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+Light green: #7ed56f rgb(126, 213, 111)
+Medium green: #55c57a 
+Dark green: #28b485 rgb(40, 100, 131)
 
 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /*Prevents paddings or borders being added to overall size*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    /* Padding for entire webpage - simple white line*/
+    padding: 30px;
+}
+
+.Header {
+    /*VH - used for scaling on different browsers and screen sizes*/
+    height: 95vh;
+    /*linear gradient allows to overlap colours to mix together and position*/
+    /* Opacitiy - 0.8*/
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(126, 213, 111, 0.8), 
+        rgba(40, 100, 131, 0.8)), 
+        url(/img/hero.jpg);
+    background-size: cover;
+    /* When cropping webpage/background stays the same*/
+    background-position: top;
+    /* used for blocking out the part of the background imager in header*/
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+}
