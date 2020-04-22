@@ -7,9 +7,11 @@ Dark green: #28b485 rgb(40, 100, 131)
 
 */
 
+
 /*-----------------------------------------------*/
 /*------Main CSS-----*/
 /*-----------------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -37,10 +39,9 @@ body {
     height: 95vh;
     /*linear gradient allows to overlap colours to mix together and position*/
     /* Opacitiy - 0.8*/
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba(126, 213, 111, 0.8), 
-        rgba(40, 100, 131, 0.8)), 
+    background-image: linear-gradient(to right bottom,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 100, 131, 0.8)),
         url(/img/hero.jpg);
     background-size: cover;
     /* When cropping webpage/background stays the same*/
@@ -53,43 +54,46 @@ body {
 
 /*-----------------------------------------------*/
 /*------Logo-----*/
-/*-----------------------------------------------*/        
-.logo-box{
+/*-----------------------------------------------*/
+
+.logo-box {
     position: absolute;
     top: 40px;
     height: 40px;
 }
 
-.logo{
+.logo {
     height: 35px;
-    
+
 }
+
 
 /*-----------------------------------------------*/
 /*------Heading Text-----*/
 /*-----------------------------------------------*/
-.text-box{
+
+.text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.heading-primary{
+.heading-primary {
     color: #fff;
     text-transform: uppercase;
-    
-    /* Remove the shaking from animation
-*/
+
+    /* Remove the shaking from animation*/
     backface-visibility: hidden;
 }
 
-.heading-primary-main{
+.heading-primary-main {
     display: block;
     font-size: 60px;
     font-weight 400;
     letter-spacing: 35px;
-    
+
     animation: moveInLeft 1s ease-out;
     /*
      * animation-delay: 3s;
@@ -97,12 +101,12 @@ body {
      */
 }
 
-.heading-primary-sub{
+.heading-primary-sub {
     display: block;
     font-size: 20px;
     font-weight 400;
     letter-spacing: 17.4px;
-    
+
     animation: moveInRight 1s ease-out;
 }
 
@@ -111,20 +115,20 @@ body {
 /*------Keyframes-----*/
 /*-----------------------------------------------*/
 
-@keyframes moveInLeft{
-    0%{
+@keyframes moveInLeft {
+    0% {
         /*Ivisible*/
         opacity: 0;
         /*Start - 100px*/
         transform: translateX(-100px);
     }
-    
-    80%{
+
+    80% {
         opacity: 1;
         transform: translateX(10px);
     }
-    
-    100%{
+
+    100% {
         /*Visible*/
         opacity: 1;
         transform: translate(0);
@@ -132,26 +136,57 @@ body {
 }
 
 
-@keyframes moveInRight{
-    0%{
+@keyframes moveInRight {
+    0% {
         /*Ivisible*/
         opacity: 0;
         /*Start - 100px*/
         transform: translateX(100px);
     }
-    
-    80%{
+
+    80% {
         opacity: 1;
         transform: translateX(-10px);
     }
-    
-    100%{
+
+    100% {
         /*Visible*/
         opacity: 1;
         transform: translate(0);
     }
 }
 
+
+/*-----------------------------------------------*/
+/*------Buttons -----*/
+/*-----------------------------------------------*/
+
+.btn:link, 
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    /* Top Bottom / Left Right */
+    padding: 15px 40px;
+    display: inline-block;
+    /* Round the button corners*/
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+.btn-wite {
+    background-color: #fff;
+    color: #777;
+}
 
 
 
