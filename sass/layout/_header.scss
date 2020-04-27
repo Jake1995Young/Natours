@@ -1,0 +1,81 @@
+/*-----------------------------------------------*/
+/*------Header - Background -----*/
+/*-----------------------------------------------*/
+
+.Header {
+    /*VH - used for scaling on different browsers and screen sizes*/
+    height: 95vh;
+    /*linear gradient allows to overlap colours to mix together and position*/
+    /* Opacitiy - 0.8*/
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        url(/img/hero.jpg);
+    background-size: cover;
+    /* When cropping webpage/background stays the same*/
+    background-position: top;
+    /* used for blocking out the part of the background imager in header*/
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+    position: relative;
+    
+    /*-----------------------------------------------*/
+    /*------Logo-----*/
+    /*-----------------------------------------------*/
+
+    &__logo-box{
+        position: absolute;
+        padding-left: 30px;
+        top: 40px;
+        height: 40px;
+    }
+    
+    &__logo {
+        height: 35px;
+    }
+
+    /*-----------------------------------------------*/
+    /*------Heading Text-----*/
+    /*-----------------------------------------------*/
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+
+
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    /* Remove the shaking from animation*/
+    backface-visibility: hidden;
+    
+    &--main {
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 35px;
+
+        animation: moveInLeft 1s ease-out;
+        /*
+         * animation-delay: 3s;
+         * animation-iteration-count: 3;
+         */
+    }
+
+    &--sub {
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 17.4px;
+        padding-bottom: 50px;
+
+        animation: moveInRight 1s ease-out;
+    }
+}
