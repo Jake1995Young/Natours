@@ -90,6 +90,7 @@ body {
 
 .heading-secondary {
   color: #55c57a;
+  padding-bottom: 10rem;
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -104,12 +105,12 @@ body {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase; }
 
 .paragraph {
-  font-size: 1.6rem; }
+  font-size: 1.5rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
@@ -138,7 +139,7 @@ body {
   border-radius: 100px;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.5rem; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -176,7 +177,7 @@ body {
   animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
-  font-style: 1.6rem;
+  font-style: 1.5rem;
   color: #55c57a;
   display: inline-block;
   text-decoration: none;
@@ -242,12 +243,10 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 50rem;
+  height: 52rem;
   position: relative; }
   .card__side {
-    color: white;
-    font-size: 2rem;
-    height: 50rem;
+    height: 52rem;
     transition: all .8s ease;
     position: absolute;
     top: 0;
@@ -255,7 +254,8 @@ body {
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    overflow: hidden; }
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
@@ -267,9 +267,55 @@ body {
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(/img/nat-5.jpg);
+      height: 23rem; }
+    .card__picture--2 {
+      background-image: url(/img/nat-6.jpg);
+      height: 23rem; }
+    .card__picture--3 {
+      background-image: url(/img/nat-7.jpg);
+      height: 23rem; }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
 
 /*-----------------------------------------------*/
 /*------Header - Background -----*/
@@ -283,6 +329,7 @@ body {
   background-size: cover;
   /* When cropping webpage/background stays the same*/
   background-position: top;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
   /* used for blocking out the part of the background imager in header*/
   clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
   position: relative;

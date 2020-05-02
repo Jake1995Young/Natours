@@ -15,6 +15,10 @@
     background-size: cover;
     /* When cropping webpage/background stays the same*/
     background-position: top;
+    
+    //allows to work on all browsers
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+    
     /* used for blocking out the part of the background imager in header*/
     clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
     position: relative;

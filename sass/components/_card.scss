@@ -4,13 +4,11 @@
     //To enable working in Firefox
     -moz-perspective: 150rem;
     
-    height: 50rem;
+    height: 52rem;
     position: relative;
     
     &__side{
-        color: white;
-        font-size: 2rem;
-        height: 50rem;
+        height: 52rem;
         //Animation and time of animation
         transition: all .8s ease;
         
@@ -25,6 +23,9 @@
         //rounded corners
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+        //Stops image from overflowing the box
+        overflow: hidden;
     
         //Front side of the card
         &--front{
@@ -50,11 +51,152 @@
     }
     
     &:hover &__side--front{
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
     
     &:hover &__side--back{
         transform: rotateY(0deg);
     }
     
+    
+    &__picture{
+        
+        background-size: cover;
+        //New mode only available on chrome
+        background-blend-mode: screen;
+        
+        //allows to work on all browsers
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        
+        &--1{
+            background-image: linear-gradient(
+                to right bottom, 
+                $color-secondary-light, 
+                $color-secondary-dark), 
+                url(/img/nat-5.jpg);
+            height: 23rem;
+        }
+        
+        
+        &--2{
+            background-image: url(/img/nat-6.jpg);
+            height: 23rem;
+        }
+        
+        &--3{
+            background-image: url(/img/nat-7.jpg);
+            height: 23rem;
+        }
+    }
+    
+    
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width:  75%;
+    }
+    
+    &__heading-span{
+        
+        padding: 1rem 1.5rem;
+        
+        //allow to work on all browsers, this clone treats the declarations in the selector to all of the boxes 
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+        &--1{
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-secondary-light, .85), 
+                rgba($color-secondary-dark, .85));
+        }
+        
+        &--2{
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-primary-light, .85), 
+                rgba($color-primary-dark, .85));
+        }
+        
+        &--3{
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-tertiary-light, .85), 
+                rgba($color-tertiary-dark, .85));
+        }
+    }
+    
+    &__details{
+        
+        padding: 3rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            //align block element in a block element into the center
+            margin: 0 auto;
+            
+            li{
+                text-align: center;
+                font-size: $default-font-size;
+                padding: 1rem;
+                
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light-2
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
