@@ -7,9 +7,10 @@
     height: 95vh;
     /*linear gradient allows to overlap colours to mix together and position*/
     /* Opacitiy - 0.8*/
-    background-image: linear-gradient(to right bottom,
-            rgba($color-primary-light, 0.8),
-            rgba($color-primary-dark, 0.8)),
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
         url(/img/hero.jpg);
     background-size: cover;
     /* When cropping webpage/background stays the same*/
