@@ -2,7 +2,6 @@
     max-width: $grid-width;
     /*Center block elemenet inside another block element*/
     margin: 0 auto;
-   
     //this selects everything except the last child 
     //Putting the margin on everything excapt the last child
     &:not(:last-child){
