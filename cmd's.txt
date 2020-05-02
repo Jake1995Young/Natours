@@ -1,0 +1,7 @@
+cd onedrive - dell technologies/desktop/web design/natours/sass
+npm run compile:sass
+
+cd onedrive - dell technologies/desktop/web design/natours
+live-server
+
+cd onedrive - dell technologies/desktop/web design/natours
