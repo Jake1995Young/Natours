@@ -15,7 +15,7 @@
     background-size: cover;
     
     //Moving the section up to cover white spot
-    margin-top: -13rem;
+    margin-top: -10rem;
     transform: skewY(-7deg);
     
     //Select everything that is a direct child of these features
@@ -32,6 +32,6 @@
 }
 
 .section-stories{
+    position: relative;
     padding: 15rem 0;
-    background-color: $color-grey-light-1;
 }
