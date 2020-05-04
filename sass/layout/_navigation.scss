@@ -126,7 +126,6 @@
         
         &::before{
             top: -.8rem;
-            transform-origin: right;
         }
         
         &::after{
@@ -147,12 +146,12 @@
     }
     
     &__checkbox:checked + &__button &__icon:before{
-        //top: 0;
+        top: 0;
         transform: rotate(135deg);
     }
     
     &__checkbox:checked + &__button &__icon:after{
-        //top: 0;
+        top: 0;
         transform: rotate(-135deg);
     }
 }
