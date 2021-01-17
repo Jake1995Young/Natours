@@ -566,7 +566,7 @@ body {
   height: 95vh;
   /*linear gradient allows to overlap colours to mix together and position*/
   /* Opacitiy - 0.8*/
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(Assets/Images/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(/Assets/Images/hero.jpg);
   background-size: cover;
   /* When cropping webpage/background stays the same*/
   background-position: top;
